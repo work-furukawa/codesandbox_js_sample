@@ -148,3 +148,56 @@ console.log(arr8);
 arr8[0] = 100;
 console.log(arr8);
 console.log(arr4);
+
+const nameArr = ["山田", "田中", "鈴木"];
+for (let i = 0; i < nameArr.length; i++) {
+  console.log(nameArr[i]);
+}
+
+const nameArr2 = nameArr.map((name) => name);
+console.log(nameArr2);
+
+nameArr.map((name) => console.log(name));
+nameArr.map((name, index) => console.log(`${index}番目は${name}です`));
+
+const numArr = [1, 2, 3, 4, 5];
+const newNumArr = numArr.filter((num) => {
+  return num % 2 === 0;
+});
+console.log(newNumArr);
+
+const newNameArr2 = nameArr.map((name) => {
+  if (name === "山田") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+console.log(newNameArr2);
+
+const checkSum = (num1, num2) => {
+  return num1 + num2 > 100 ? "100を超えています" : "許容範囲ないです";
+};
+console.log(checkSum(50, 60));
+console.log(checkSum(40, 60));
+
+/**
+ * 論理演算子
+ */
+const flag1 = true;
+const flag2 = false;
+
+if (flag1 || flag2) {
+  console.log("1 or 2はtrueです");
+}
+if (flag1 && flag2) {
+  console.log("1 and 2はtrueです");
+}
+
+const num = null;
+const fee = num || "金額は未設定です";
+console.log(fee);
+
+const num3 = 100;
+const fee2 = num3 && "何か設定されています";
+console.log(fee2);
